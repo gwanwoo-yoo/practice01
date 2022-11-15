@@ -40,7 +40,7 @@ public class UserController {
   }
 
   @PostMapping("/user")
-  public String insertUser(
+  public Integer insertUser(
     @RequestBody UserFromDatabase userFromDatabase
   ){
     return userService.insertUser(userFromDatabase);

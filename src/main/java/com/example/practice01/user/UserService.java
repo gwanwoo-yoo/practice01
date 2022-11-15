@@ -44,4 +44,9 @@ public class UserService {
   public List<UserFromDatabase> getUser(String firstName, String lastName) {
     return userRepository.getSearchUser(firstName, lastName);
   }
+
+  public Integer insertUser(UserFromDatabase userFromDatabase){
+    return userRepository.insertUser(userFromDatabase);
+  }
+
 }
