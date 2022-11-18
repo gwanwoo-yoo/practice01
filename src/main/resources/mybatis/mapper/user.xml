@@ -8,6 +8,9 @@
     insert into employees (employeeNumber, lastName, firstName, extension, email, officeCode, reportsTo, jobTitle)
     values (#{employeeNumber},#{lastName},#{firstName},#{extension},#{email},#{officeCode},#{reportsTo},#{jobTitle});
   </insert>
+  <update id="updateUser">
+    UPDATE ~
+  </update>
   <select id="getUsers" resultType="com.example.practice01.user.model.UserFromDatabase">
     SELECT firstName, lastName, email FROM employees;
   </select>

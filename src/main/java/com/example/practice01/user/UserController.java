@@ -24,10 +24,10 @@ public class UserController {
 //    return true;
 //  }
 
-  @GetMapping("/users")
-  public List<User> users(){
-    return userService.findAll();
-  }
+//  @GetMapping("/users")
+//  public List<User> users(){
+//    return userService.findAll();
+//  }
 
   @GetMapping("/userFromDatabase")
   public List<UserFromDatabase> userFromDatabase(){
@@ -63,6 +63,6 @@ public class UserController {
       @RequestBody UserFromDatabase userFromDatabase
   ){
     //Todo : 사용자 정보 변경 기능 구현
-    return employeeNumber;
+    return userService.updateUser(employeeNumber, userFromDatabase);
   }
 }

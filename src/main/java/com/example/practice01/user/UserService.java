@@ -29,13 +29,6 @@ public class UserService {
     return users;
   }
 
-  public User save(User user) {
-    if (user.getId() == null) {
-      user.setId(++usersCount);
-    }
-    users.add(user);
-    return user;
-  }
 
   public List<UserFromDatabase> findAllFromDatabase() {
     return userRepository.getUsers();
@@ -49,4 +42,8 @@ public class UserService {
     return userRepository.insertUser(userFromDatabase);
   }
 
+  public Integer updateUser(Integer employeeNumber, UserFromDatabase userFromDatabase) {
+    userFromDatabase.setEmployeeNumber(employeeNumber);
+    return userRepository.updateUser(userFromDatabase);
+  }
 }

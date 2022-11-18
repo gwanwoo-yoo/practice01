@@ -11,4 +11,6 @@ public interface UserRepository {
 
     List<UserFromDatabase> getSearchUser(String firstName, String lastName);
     Integer insertUser(UserFromDatabase userFromDatabase);
+
+    Integer updateUser(UserFromDatabase userFromDatabase);
 }
