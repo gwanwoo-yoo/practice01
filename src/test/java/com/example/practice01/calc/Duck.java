@@ -33,6 +33,7 @@ public class Duck {
     public void swimming(){
         System.out.println("오리가 수영을 합니다");
     }
+    //swimming 오버라이드 하여 "돌로만든 오리는 수영을 못합니다" 출력
 
     public void speak(){
         System.out.println(this.name);
